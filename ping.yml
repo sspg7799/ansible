@@ -1,10 +1,10 @@
 ---
-  - hosts: all
-    becomes: yes
-    tasks:
-  - namae: ping nodes
+- hosts: all
+  become: yes
+  tasks:
+  - name: ping all nodes
     ping:
-    -name: install git
+  - name: my install git
     apt:
       name: git
-    state: present
+      state: present
