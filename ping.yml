@@ -2,7 +2,7 @@
   - hosts: all
     becomes: yes
     tasks:
-  - namae: ping all nodes
+  - namae: ping nodes
     ping:
     -name: install git
     apt:
