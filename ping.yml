@@ -2,9 +2,10 @@
 - hosts: all
   become: yes
   tasks:
-  - name: ping all nodes
-    ping:
-  - name: my install git
-    apt:
-      name: git
-      state: present
+    - name: ping all nodes
+      ping:
+    - name: install my git
+      apt:
+        name: git
+        state: present
+        
