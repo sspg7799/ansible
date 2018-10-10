@@ -1,6 +1,6 @@
 ---
 - hosts: all
-  becomes: yes
+  become: yes
   tasks:
   - name: web server on ubuntu
     apt:
