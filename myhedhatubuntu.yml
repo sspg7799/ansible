@@ -1,0 +1,21 @@
+---
+- hosts: all
+  becomes: yes
+  tasks:
+   - name: web server on ubuntu
+     apt:
+      name: apache2
+      state: present
+  when: ansible_os_family =="Debian"
+
+- name: web server on redhat
+  yum:
+    name: httpd
+    state: present  
+    when: ansible_os_family =="RedHat"
+
+- name: start the webserver on RedHat
+  service:
+    name: httpd
+    state: started
+  when: ansible_os_family =="RedHat" 
